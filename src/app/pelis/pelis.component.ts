@@ -8,6 +8,7 @@ import { TmdbService } from '../tmdb.service';
 })
 export class PelisComponent implements OnInit {
   popularMovies: any[] = [];
+  moviesDetails: any[] = [];
 
   constructor(private tmdbService: TmdbService) { }
 

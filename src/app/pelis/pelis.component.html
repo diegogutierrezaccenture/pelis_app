@@ -1,5 +1,12 @@
 <div *ngIf="popularMovies.length > 0">
-    <div *ngFor="let movie of popularMovies">
-        {{ movie.title }}
+    <h2>Películas Populares</h2>
+    <div class="contenidorPelis">
+        <div *ngFor="let movie of popularMovies">
+            <div class="movie-card">
+                <img [src]="'https://image.tmdb.org/t/p/w300' + movie.poster_path" alt="{{ movie.title }}">
+                <h3>{{ movie.title }}</h3>
+                <p class="text">{{ movie.overview }}</p>
+            </div>
+        </div>
     </div>
 </div>
