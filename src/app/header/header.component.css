@@ -1,0 +1,35 @@
+header {
+    background-color: #bbbbbb;
+    color: white;
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenidorImg {
+    width: fit-content;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    width: 100px;
+    margin-left: 33px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
