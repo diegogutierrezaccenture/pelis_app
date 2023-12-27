@@ -1,4 +1,24 @@
-<div *ngIf="popularMovies.length > 0">
+<div class="searchBar">
+    <form (submit)="search()">
+        <input type="text" [(ngModel)]="searchQuery" name="searchQuery" placeholder="Buscar películas">
+        <button type="submit">Buscar</button>
+    </form>
+</div>
+
+<div *ngIf="searchResults.length > 0">
+    <h2>Resultados de la búsqueda:</h2>
+    <div class="contenidorPelis">
+        <div *ngFor="let movie of searchResults">
+            <div class="movie-card">
+                <img [src]="'https://image.tmdb.org/t/p/w300' + movie.poster_path" alt="{{ movie.title }}">
+                <h3>{{ movie.title }}</h3>
+                <p class="text">{{ movie.overview }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="searchResults.length === 0 && popularMovies.length > 0">
     <h2>Películas Populares</h2>
     <div class="contenidorPelis">
         <div *ngFor="let movie of popularMovies">

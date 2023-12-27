@@ -14,4 +14,19 @@ export class TmdbService {
     const url = `https://api.themoviedb.org/3/movie/popular?api_key=${this.apiKey}`;
     return this.http.get(url);
   }
+
+  getMovieDetails(movieId: number): Observable<any> {
+    const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${this.apiKey}`;
+    return this.http.get(url);
+  }
+
+  searchMovies(query: string): Observable<any> {
+    const url = `https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${query}`;
+    return this.http.get(url);
+  }
+
+  getMoviesByGenre(genreId: number): Observable<any> {
+    const url = `https://api.themoviedb.org/3/discover/movie?api_key=${this.apiKey}&with_genres=${genreId}`;
+    return this.http.get(url);
+  }
 }

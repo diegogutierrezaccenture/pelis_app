@@ -1,3 +1,23 @@
+.searchBar {
+    text-align: center;
+}
+
+.searchBar input {
+    width: 250px;
+    border-radius: 4px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.searchBar button {
+    border-radius: 4px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
 .contenidorPelis {
     display: flex;
     flex-wrap: wrap;
@@ -20,6 +40,10 @@
     max-width: 100%;
     border-radius: 6px;
     margin-bottom: 10px;
+}
+
+h2 {
+    margin-left: 10px;
 }
 
 h3 {
